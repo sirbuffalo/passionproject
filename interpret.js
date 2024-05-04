@@ -15,14 +15,18 @@ function interpret(statements) {
 function evaluate(expr) {
     switch (expr.type) {
         case 'add':
-
-        case 'int':
-            return expr.value;
+            return evaluate(expr.value1) + evaluate(expr.value2);
 
         case 'div':
             return evaluate(expr.value1) / evaluate(expr.value2);
 
+        case 'int':
+            return expr.value;
+
         case 'mul':
             return evaluate(expr.value1) * evaluate(expr.value2);
+
+        case 'sub':
+            return evaluate(expr.value1) - evaluate(expr.value2);
     }
 }
