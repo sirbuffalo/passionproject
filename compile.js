@@ -150,27 +150,3 @@ function compile(code, inputs) {
 	const stematedAnalysised = stematedAnalysise(lexicalAnalysised)
 	return stematedAnalysised
 }
-
-function interpret(statements) {
-	const output = [];
-
-	for (const statement of statements) {
-		switch (statement.type) {
-		case 'say':
-			output.push(evaluate(statement.value));
-			break;
-        }
-	}
-
-	return output;
-}
-
-function evaluate(expr) {
-	switch (expr.type) {
-	case 'int':
-		return expr.value;
-
-	case 'mul':
-		return evaluate(expr.value1) * evaluate(expr.value2);
-	}
-}
