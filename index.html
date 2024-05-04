@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css"></link>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/material-darker.min.css"></link>
+</head>
+
+<body>
+  <div class="header-inputs">
+    <div class="header">
+      
+    </div>
+    <div class="inputs">
+      <div class="inputs-label">Inputs: </div>
+      <div class="input new" onclick="newInput(this)">New</div>
+    </div>
+  </div>
+  <div class="code-div">
+  <textarea id="code" name="code">
+i = 1
+answer = 1
+do:
+answer *= i
+i += 1
+:5 times
+</textarea>
+  </div>
+  <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js"></script>
+  <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/python/python.min.js"></script>
+  <script language="javascript" type="text/javascript" src="/compile.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
